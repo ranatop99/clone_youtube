@@ -21,16 +21,21 @@ const ChannelDetail = () => {
 
   return (
     <Box minHeight="95vh">
-      <Box />
-      <div
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(121,9,73,0.9698004201680672) 0%, rgba(0,130,255,1) 100%)",
-          zIndex: 10,
-          height: "300px",
-        }}
-      />
-      <ChannelCard channelDetail={channelDetail} />
+      <Box>
+        <div
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(121,9,73,0.9698004201680672) 0%, rgba(0,130,255,1) 100%)",
+            zIndex: 10,
+            height: "300px",
+          }}
+        />
+        <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
+      </Box>
+      <Box display="flex" p="2">
+        <Box sx={{ mr: { sm: "100px" } }} />
+        <Videos videos={videos} />
+      </Box>
     </Box>
   );
 };
